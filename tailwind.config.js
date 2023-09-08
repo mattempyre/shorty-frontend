@@ -1,16 +1,12 @@
-/** @type {import('tailwindcss').Config} */
+import { forms, typography } from '@tailwindcss/aspect-ratio';
+
 export default {
-  purge: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
-  darkMode: false, // or 'media' or 'class'
+  mode: 'jit',
+  purge: ['./index.html', './src/**/*.{js,jsx,ts,tsx,vue}'],
+  darkMode: false,
   theme: {
-    extend: {
-      colors: {
-        primary: '#3490dc',
-        secondary: '#ffed4a',
-        danger: '#e3342f',
-      },
-    },
+    extend: {},
   },
   variants: {},
-  plugins: [],
+  plugins: [forms(), typography()],
 };
