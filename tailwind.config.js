@@ -1,12 +1,14 @@
-import { forms, typography } from '@tailwindcss/aspect-ratio';
+/** @type {import('tailwindcss').Config} */
+
+import typography from '@tailwindcss/typography';
+import forms from '@tailwindcss/forms';
 
 export default {
   mode: 'jit',
-  purge: ['./index.html', './src/**/*.{js,jsx,ts,tsx,vue}'],
-  darkMode: false,
+  content: ['./src/**/*.{html,js,ts,jsx,tsx}'],
   theme: {
     extend: {},
   },
   variants: {},
-  plugins: [forms(), typography()],
+  plugins: [typography, forms],
 };
